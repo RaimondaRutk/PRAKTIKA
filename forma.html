@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forma</title>
+  </head>
+  <body>
+    <form action="index.php" method="POST">
+      <fieldset>
+        <legend>Prisijungimo duomenys</legend>
+        <p>
+          <label>Vartotojo vardas</label>
+          <input
+            type="text"
+            name="User_name"
+            placeholder="Įveskite vardą"
+            title="Nepamirškite vardo!"
+            required
+          />
+        </p>
+        <label>Slaptažodis</label>
+        <input
+          type="password"
+          name="user_passsword"
+          placeholder="Įveskite slaptažodį"
+          title="nepamirškite slaptažodžio."
+          required
+        />
+        <input
+          type="password"
+          name="user_passsword"
+          placeholder="Pakartokite slaptažodį"
+          required
+        />
+        <p>
+          <label>El. paštas</label>
+          <input
+            type="email"
+            name="pasto_adresas"
+            placeholder="tik su @panko.lt"
+            title="Nepamirškite pašto adreso"
+            required
+          />
+        </p>
+        <label> Jūsų nuotrauka: </label>
+        <input
+          name="picture"
+          type="file"
+          id="picture"
+          accept="image/*"
+          title="Nepamirškite nuotraukos"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Asmeninė informacija</legend>
+        <p>
+          <label>Vardas</label>
+          <input
+            type="Vardas"
+            name="name"
+            placeholder="Įveskite savo vardą"
+            title="Nepamirškite vardo!"
+            required
+          />
+        </p>
+        <p>
+          <label>Pavardė</label>
+          <input
+            type="Pavardė"
+            name="Last_name"
+            placeholder="Įveskite savo pavardę"
+            title="Nepamirškite pavardės!"
+            required
+          />
+        </p>
+        <p>
+          <label>Lytis:</label>
+          <input type="radio" name="lytis" value="vyras" required />Vyras
+          <input type="radio" name="lytis" value="moteris" />Moteris
+        </p>
+        <label>Amžius:</label>
+        <input
+          type="number"
+          name="Amžius"
+          value="0"
+          title="Nepamirškite amžiaus"
+          min="1"
+          max="150"
+          required
+        />
+        <p>
+          <label>Gimimo data: </label>
+          <input type="date" name="data" title="Nepamirškite datos" required />
+        </p>
+        <p>
+          <label>Mob telefonas: </label>
+          <input
+            type="telefonas"
+            name="Telefonas"
+            title="Naudokite formatą +XXX X XXX XXX su tarpais!"
+            placeholder="+370 0 000 000"
+            pattern="[+][0-9]{3} [0-9]{1} [0-9]{3} [0-9]{3}"
+            maxlength="15"
+            required
+          />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Jūsų sugebėjimai ir pomėgiai</legend>
+        <p>
+          <label>Kurias kalbas mokate?:</label>
+          <input
+            type="checkbox"
+            name="Kalba"
+            title="pasirinkti Anglų"
+            value="Anglu"
+          />Anglų
+          <input
+            type="checkbox"
+            name="Kalba"
+            title="pasirinkti Lenkų"
+            value="Lenku"
+          />Lenkų
+          <input
+            type="checkbox"
+            name="Kalba"
+            title="pasirinkti Prancūzų"
+            value="prancuzu"
+          />Prancūzų
+          <input
+            type="checkbox"
+            name="Kalba"
+            title="pasirinkti Rusų"
+            value="Rusu"
+          />Rusų
+          <input
+            type="checkbox"
+            name="Kalba"
+            title="pasirinkti Vokiečių"
+            value="Vokieciu"
+          />Vokiečių
+        </p>
+        <p>
+          <label>Jūsų mėgstama spalva: </label>
+          <input type="Color" name="Spalvos" title="Pasirinkite spalvą" />
+        </p>
+        <label>Polinkis į ekstemalumą: Mažas</label>
+        <input type="range" min="1" max="100" name="ekstremalumas" title="Kiek ekstremalumo mėgstate?">Didelis 
+        <label>Ar turi vairuotojo teises?:</label>
+        <select name="Teises" title="Pasirinkite tinkama variantą">
+        <option value="Taip">Taip</option>
+        <option value="Ne">Ne</option>
+        <option value="Planuoju">Planuoju turėti</option>
+        </select>
+        <p>
+        <label>Apie save daugiau:</label>
+        <textarea name="Apie Save" title="Apibūdinkite save" rows="3" cols="30" ></textarea>
+        </p>
+       </fieldset>
+       <input type="Submit" value="Registruotis">
+      </fieldset>
+    </form>
+  </body>
+</html>
