@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Forma</title>
+    <title>Asmens registracija į klubą</title>
   </head>
   <body>
-    <form action="index.php" method="POST">
+    <h1>Asmens registracija į klubą</h1>
+    <form action="forma.html" method="POST">
       <fieldset>
         <legend>Prisijungimo duomenys</legend>
         <p>
@@ -18,29 +19,32 @@
             placeholder="Įveskite vardą"
             title="Nepamirškite vardo!"
             required
+            autofocus
           />
         </p>
         <label>Slaptažodis</label>
         <input
           type="password"
-          name="user_passsword"
+          name="slaptazodis"
           placeholder="Įveskite slaptažodį"
           title="nepamirškite slaptažodžio."
           required
         />
         <input
           type="password"
-          name="user_passsword"
+          name="slaptazodis2"
           placeholder="Pakartokite slaptažodį"
+          title="Pakartoti slaptažodį"
           required
         />
         <p>
           <label>El. paštas</label>
           <input
             type="email"
-            name="pasto_adresas"
+            name="elpastas"
             placeholder="tik su @panko.lt"
             title="Nepamirškite pašto adreso"
+            pattern="[a-z0-9._%+-]+@panko.lt"
             required
           />
         </p>
@@ -60,7 +64,7 @@
           <label>Vardas</label>
           <input
             type="Vardas"
-            name="name"
+            name="Vardas"
             placeholder="Įveskite savo vardą"
             title="Nepamirškite vardo!"
             required
@@ -70,7 +74,7 @@
           <label>Pavardė</label>
           <input
             type="Pavardė"
-            name="Last_name"
+            name="Pavardė"
             placeholder="Įveskite savo pavardę"
             title="Nepamirškite pavardės!"
             required
@@ -78,17 +82,17 @@
         </p>
         <p>
           <label>Lytis:</label>
-          <input type="radio" name="lytis" value="vyras" required />Vyras
-          <input type="radio" name="lytis" value="moteris" />Moteris
+          <input type="radio" name="gender" value="vyras" required />Vyras
+          <input type="radio" name="gender" value="moteris" />Moteris
         </p>
         <label>Amžius:</label>
         <input
           type="number"
-          name="Amžius"
+          name="Age"
           value="0"
           title="Nepamirškite amžiaus"
           min="1"
-          max="150"
+          max="9999"
           required
         />
         <p>
@@ -99,7 +103,7 @@
           <label>Mob telefonas: </label>
           <input
             type="telefonas"
-            name="Telefonas"
+            name="Phone"
             title="Naudokite formatą +XXX X XXX XXX su tarpais!"
             placeholder="+370 0 000 000"
             pattern="[+][0-9]{3} [0-9]{1} [0-9]{3} [0-9]{3}"
@@ -114,31 +118,31 @@
           <label>Kurias kalbas mokate?:</label>
           <input
             type="checkbox"
-            name="Kalba"
+            name="English"
             title="pasirinkti Anglų"
             value="Anglu"
           />Anglų
           <input
             type="checkbox"
-            name="Kalba"
+            name="Polish"
             title="pasirinkti Lenkų"
             value="Lenku"
           />Lenkų
           <input
             type="checkbox"
-            name="Kalba"
+            name="French"
             title="pasirinkti Prancūzų"
-            value="prancuzu"
+            value="Prancuzu"
           />Prancūzų
           <input
             type="checkbox"
-            name="Kalba"
+            name="Russian"
             title="pasirinkti Rusų"
             value="Rusu"
           />Rusų
           <input
             type="checkbox"
-            name="Kalba"
+            name="German"
             title="pasirinkti Vokiečių"
             value="Vokieciu"
           />Vokiečių
@@ -149,15 +153,17 @@
         </p>
         <label>Polinkis į ekstemalumą: Mažas</label>
         <input type="range" min="1" max="100" name="ekstremalumas" title="Kiek ekstremalumo mėgstate?">Didelis 
+        <p>
         <label>Ar turi vairuotojo teises?:</label>
-        <select name="Teises" title="Pasirinkite tinkama variantą">
+        <select name="Licence" title="Pasirinkite tinkama variantą">
         <option value="Taip">Taip</option>
         <option value="Ne">Ne</option>
         <option value="Planuoju">Planuoju turėti</option>
         </select>
+        </p>
         <p>
         <label>Apie save daugiau:</label>
-        <textarea name="Apie Save" title="Apibūdinkite save" rows="3" cols="30" ></textarea>
+        <textarea name="Information" title="Apibūdinkite save" rows="3" cols="30" minlength="8" maxlength="50" ></textarea>
         </p>
        </fieldset>
        <input type="Submit" value="Registruotis">
@@ -165,3 +171,6 @@
     </form>
   </body>
 </html>
+
+
+
