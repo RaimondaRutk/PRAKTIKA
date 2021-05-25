@@ -31,6 +31,20 @@ var Template = [
   'Smetonos_dvaras',
 ];
 
+const arrayWithoutNumbers = (tourism: Tourism) => {
+  var i = 0;
+  while (i < tourism.length) {
+    if (!!Number(tourism[i])) {
+      tourism.splice(i, 1);
+    } else {
+      i++;
+    }
+  }
+  return tourism;
+};
+
 const result = getLithuaniaPlaces(tourism, Template);
+const noNumbers = arrayWithoutNumbers(tourism);
 
 document.getElementById('app')?.append(result.toString());
+document.getElementById('beSkaiciu')?.append(noNumbers.toString());
