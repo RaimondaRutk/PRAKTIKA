@@ -1,0 +1,19 @@
+{
+  "name": "typescript_praktika",
+  "version": "0.0.1",
+  "description": "Praktikoje mokausi typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaimondaRutk/PRAKTIKA.git"
+  },
+  "author": "Raimonda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaimondaRutk/PRAKTIKA/issues"
+  },
+  "homepage": "https://github.com/RaimondaRutk/PRAKTIKA#readme"
+}
