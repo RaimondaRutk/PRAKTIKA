@@ -43,8 +43,31 @@ const arrayWithoutNumbers = (tourism: Tourism) => {
   return tourism;
 };
 
+const getCastles = (tourism: Tourism): Tourism => {
+  const castles: Tourism = new Array();
+  tourism.forEach((place, index) => {
+    var words: Tourism = new Array();
+    var newWord = '';
+    var isPilis = false;
+    words = place.split('_');
+    words.forEach((word, index) => {
+      if (word == 'pilis') {
+        words.splice(index, 1);
+        isPilis = true;
+      } else newWord += word;
+    });
+
+    if (isPilis) {
+      castles.push(newWord);
+    }
+  });
+  return castles;
+};
+
 const result = getLithuaniaPlaces(tourism, Template);
 const noNumbers = arrayWithoutNumbers(tourism);
+const castles = getCastles(tourism);
 
 document.getElementById('app')?.append(result.toString());
 document.getElementById('beSkaiciu')?.append(noNumbers.toString());
+document.getElementById('pilys')?.append(castles.toString());
