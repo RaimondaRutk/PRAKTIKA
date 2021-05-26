@@ -64,10 +64,22 @@ const getCastles = (tourism: Tourism): Tourism => {
   return castles;
 };
 
+const symbolCount = (tourism: Tourism): Tourism => {
+  const symbols: Tourism = new Array();
+  tourism.map((place, index) => {
+    var newWord = '';
+    newWord = place + ' - ' + place.length;
+    symbols.push(newWord);
+  });
+  return symbols;
+};
+
 const result = getLithuaniaPlaces(tourism, Template);
 const noNumbers = arrayWithoutNumbers(tourism);
 const castles = getCastles(tourism);
+const symbols = symbolCount(tourism);
 
 document.getElementById('app')?.append(result.toString());
 document.getElementById('beSkaiciu')?.append(noNumbers.toString());
 document.getElementById('pilys')?.append(castles.toString());
+document.getElementById('simboliai')?.append(symbols.toString());

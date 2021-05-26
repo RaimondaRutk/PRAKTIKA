@@ -7,7 +7,7 @@ var sum = addNumbers(10, 15);
 document.getElementById('app')?.append('Sum of the two numbers is : ' + sum);
 console.log('Sum of the two numbers is: ' + sum);
 */
-var _a, _b, _c;
+var _a, _b, _c, _d;
 var tourism = [
     '1',
     'Traku_pilis',
@@ -60,9 +60,20 @@ var getCastles = function (tourism) {
     });
     return castles;
 };
+var symbolCount = function (tourism) {
+    var symbols = new Array();
+    tourism.map(function (place, index) {
+        var newWord = '';
+        newWord = place + ' - ' + place.length;
+        symbols.push(newWord);
+    });
+    return symbols;
+};
 var result = getLithuaniaPlaces(tourism, Template);
 var noNumbers = arrayWithoutNumbers(tourism);
 var castles = getCastles(tourism);
+var symbols = symbolCount(tourism);
 (_a = document.getElementById('app')) === null || _a === void 0 ? void 0 : _a.append(result.toString());
 (_b = document.getElementById('beSkaiciu')) === null || _b === void 0 ? void 0 : _b.append(noNumbers.toString());
 (_c = document.getElementById('pilys')) === null || _c === void 0 ? void 0 : _c.append(castles.toString());
+(_d = document.getElementById('simboliai')) === null || _d === void 0 ? void 0 : _d.append(symbols.toString());
